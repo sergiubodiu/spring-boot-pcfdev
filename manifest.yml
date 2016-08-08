@@ -1,0 +1,11 @@
+---
+memory: 384M
+instances: 1
+applications:
+- name: fortunes
+  host: fortunes
+  path: target/demo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  services: [fortunes-db]
+  env:
+    SPRING_PROFILES_ACTIVE: pcf
